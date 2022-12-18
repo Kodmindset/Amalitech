@@ -6,6 +6,7 @@ window.onload = function(){
      
      const stagehands = document.querySelector(".hands");
      const stagebonus = document.querySelector(".bonus");
+    
      const showDefault =0;
 
 
@@ -22,9 +23,30 @@ window.onload = function(){
     else{
         stagebonus.style.display="none";
         stagehands.style.display="flex";
-    }
+    };
+    let rules = document.querySelector(".rules");
+   
+   
+    //let rules =document.querySelector(".rules");
+    
+    $(document).mouseup(function (e) {
+        if ($(e.target).closest(".showRuleImage").length === 0) {
+            $(".showRuleImage").hide();
+            $(".ShowRules").css("display","block");
+           
+        }
+      
+
+    });
+   
+    
+   
+    
+
+
    
 }
+
 
 let NumOfScore= JSON.parse(localStorage.getItem('score'));
 
@@ -416,18 +438,23 @@ const RulesOnClick =()=>{
     
      let contest = document.querySelector(".contest");
      contest.style.display = "none";
-    const stagehands = document.querySelector(".hands");
+     let ShowRules = document.querySelector(".ShowRules");
+     ShowRules.style.display = "none";
+    /*const stagehands = document.querySelector(".hands");
     const stagebonus = document.querySelector(".bonus");
     stagehands.style.display = "none";
-    stagebonus.style.display = "none";
+    stagebonus.style.display = "none"; */
+
      /*show the Rules page when clicked*/
     const showImage =document.querySelector(".showRuleImage");
-    showImage.style.display="flex";
-    
-   
 
-    const ShowRules =document.querySelector(".ShowRules");
-    ShowRules.style.display="none";
+    showImage.style.display="grid";
+
+    const close =document.querySelector(".close");
+    close.style.display="none";
+
+    
+    
 }
 const CloseOnClick =()=>{
      /*hind the current page*/
