@@ -10,6 +10,9 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600&display=swap" rel="stylesheet">
  <link rel="stylesheet" href="./style.css">
+ <script src=
+        "https://code.jquery.com/jquery-3.4.0.min.js">
+    </script>
  <script src="./js/index.js"></script>
 </head>
 <body>
@@ -417,7 +420,7 @@
     </div>
     
   </div>
-  <div class="rules">
+  <div class= "rules">
     
     <div class="ShowRules" onclick="RulesOnClick()">
      
@@ -426,11 +429,15 @@
     
    
   <div class="showRuleImage">
+    <h1 class="closeme" onclick="RulesOnClick()">RULES</h1> 
+
     <img class="rules_image" src="./images/image-rules-bonus.svg">
-   <div class="close" onclick="CloseOnClick()">
+   <!--
+    <div class="close" onclick="CloseOnClick()">
     
     <h1>CLOSE</h1>
    </div>
+   -->
   </div> 
   </div>
   </div>
